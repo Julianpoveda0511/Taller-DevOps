@@ -6,7 +6,7 @@ function sumar(a, b) {
 }
 
 function holaMundo() {
-  return "Hola DevOps";
+  return "Hola Arquitectos";
 }
 
 app.get('/', (req, res) => {
