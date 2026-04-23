@@ -18,9 +18,11 @@ app.get('/sumar/:a/:b', (req, res) => {
   res.send(`Resultado: ${resultado}`);
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en puerto ${PORT}`);
-});
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`Servidor corriendo en puerto ${PORT}`);
+  });
+}
 
-module.exports = { sumar, holaMundo };
+module.exports = { sumar, holaMundo, app };
